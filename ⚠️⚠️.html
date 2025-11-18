@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RaksaCraft</title>
+<style>
+  body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Trebuchet MS', sans-serif;
+    transition: background 2s ease;
+    background: rgb(100,150,255);
+  }
+
+  h1 {
+    font-size: 80px;
+    color: white;
+    text-shadow: 4px 4px 0 #000;
+    margin-bottom: 10px;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  button, a.link-btn {
+    width: 230px;
+    padding: 12px;
+    background: #d0d0d0;
+    border: 2px solid #888;
+    border-radius: 5px;
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    box-shadow: 2px 2px 0 #666;
+    cursor: pointer;
+    transition: 0.2s;
+  }
+
+  button:hover, a.link-btn:hover {
+    background: #bfbfbf;
+    transform: scale(1.03);
+  }
+
+  #realms {
+    background: #9a7ff5;
+    color: white;
+  }
+
+  .bottom-text {
+    margin-top: 20px;
+    font-size: 16px;
+    color: white;
+    text-shadow: 1px 1px 0 #000;
+  }
+
+  .profile-section {
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .profile-section img {
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    border: 2px solid white;
+  }
+
+  #music-btn {
+    background: #2ecc71;
+    color: white;
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  #music-btn:hover {
+    background: #27ae60;
+  }
+
+</style>
+</head>
+<body>
+
+  <h1>RAKSA</h1>
+  <div class="container">
+    <a href="https://api.whatsapp.com/send/?phone=6283170955520&text=assalamualaikum+wr+wb+bang" class="link-btn">wa⁰¹</a>
+    <button onclick="alert('ERROR⚠️')">Pengaturan</button>
+    <a id="realms" href="https://saweria.co/yoxxsuport" class="link-btn">Saweria</a>
+    <a href="https://whatsapp.com/channel/0029VbB1wf7It5rvXPEr2u2s" class="link-btn">Stok new💯</a>
+    <a href="https://www.tiktok.com" class="link-btn">Scroll TikTok</a>
+  </div>
+
+  <div class="profile-section">
+    <img src="https://cdn-icons-png.flaticon.com/512/149/149071.png" alt="Profil">
+    <button id="music-btn" onclick="playMusic()">Musik 🎵</button>
+  </div>
+
+  <audio id="bgm" src="http://d.top4top.io/m_3396rnnvr0.mp3"></audio>
+
+  <script>
+    // Fungsi musik
+    function playMusic() {
+      const audio = document.getElementById('bgm');
+      audio.play();
+      alert('Musik dimulai 🎶');
+    }
+
+    // Ganti warna background setiap 15 detik
+    const colors = [
+      'rgb(120,180,255)',
+      'rgb(100,255,180)',
+      'rgb(255,150,120)',
+      'rgb(255,220,100)',
+      'rgb(200,150,255)'
+    ];
+    let index = 0;
+    setInterval(() => {
+      document.body.style.background = colors[index];
+      index = (index + 1) % colors.length;
+    }, 15000);
+  </script>
+
+</body>
+</html>
